@@ -18,6 +18,7 @@ export function NewRoom(){
 
   const [newRoom, setNewRoom] = useState('');
   
+  //O método preventDefault evita uma tentativa de carregamento da página que é padrão
   async function handleCreateRoom(event: FormEvent){
     event.preventDefault();
     

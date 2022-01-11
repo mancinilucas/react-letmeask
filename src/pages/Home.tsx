@@ -12,6 +12,7 @@ import { database } from "../services/firebase";
 import '../styles/auth.scss'
 import { useAuth } from "../hooks/useAuth";
 
+//Com a atualização do react, substituiu o uso do 'history' por 'navigate'
 export function Home(){
   const navigate = useNavigate();
   const { user, signInWithGoogle } = useAuth()
