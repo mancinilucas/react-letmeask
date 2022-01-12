@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImg from '../assets/images/logo.svg'
@@ -9,6 +9,16 @@ import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 
 import '../styles/room.scss'
+
+type FirebaseQuestions = Record<string, {
+  author: {
+    name: string;
+    avatar: string;
+  }
+  content: string;
+  isAnswered: boolean;
+  isHighLighted: boolean;
+}>
 
 type RoomParams = {
   id: string;
@@ -24,7 +34,29 @@ export function Room(){
 
   const roomId = params.id;
 
-  //No atributo code apresentou erro por causa da tipagem. Foi necessario o uso da '!' na var
+  
+
+  useEffect(() => {
+    const roomRef = database.ref(`rooms/${roomId}`);
+
+    //Extração das info da room e conversão de formato de objeto para vetor/matriz*
+    roomRef.once('value', room => {
+      const databaseRoom = room.val()
+      const firebaseQuestions:FirebaseQuestions = databaseRoom.questions ?? {};
+
+      const parsedQuestions = Object.entries(firebaseQuestions).map(([key, value])=>{
+        return {
+          id: key,
+          content: value.content,
+          author: value.author,
+          isHighLighted: value.isHighLighted,
+          isAnswered: value.isAnswered
+        }
+      })
+
+      console.log(parsedQuestions)
+    })
+  }, [roomId])
 
   async function handleSendQuestion(event: FormEvent){
     event.preventDefault();
@@ -56,6 +88,7 @@ export function Room(){
 
   }
 
+  //No atributo code apresentou erro por causa da tipagem. Foi necessário o uso da '!' na var
   return(
     <div id="page-room">
       <header>
@@ -81,7 +114,7 @@ export function Room(){
           <div className="form-footer">
             { user ? (
               <div className="user-info">
-                <img src={user.avatar} alt={user.name} />
+                <img src={user.avatar} alt={user.name}/>
                 <span>{user.name}</span>
               </div>
             ) : (
