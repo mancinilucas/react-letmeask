@@ -1,5 +1,5 @@
 .question {
-  background: #fefefe;
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
@@ -43,14 +43,14 @@
       &.like-button {
         display: flex;
         align-items: flex-end;
-        color: #737380;
+        color: #646462;
         gap: 8px;
 
         &.liked {
-          color: #835afd;
+          color: #feac00;
 
           svg path {
-            stroke: #835afd;
+            stroke: #feac00;
           }
         }
       }
