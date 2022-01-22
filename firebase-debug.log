@@ -1,0 +1,25 @@
+[debug] [2022-01-22T11:52:23.093Z] ----------------------------------------------------------------------
+[debug] [2022-01-22T11:52:23.094Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lucas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-01-22T11:52:23.095Z] CLI Version:   10.1.2
+[debug] [2022-01-22T11:52:23.095Z] Platform:      win32
+[debug] [2022-01-22T11:52:23.095Z] Node Version:  v16.13.0
+[debug] [2022-01-22T11:52:23.096Z] Time:          Sat Jan 22 2022 08:52:23 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-01-22T11:52:23.096Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-22T11:52:23.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-22T11:52:23.102Z] > authorizing via signed-in user (mancinilucas05@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\vscode\ignite\reactjs\nlw6\letmeask
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
