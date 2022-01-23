@@ -15,12 +15,12 @@ Solução desenvolvida na trilha React durante a [Next Level Week 6](https://app
 
 ### The challenge
 
-Aplicação de interação de um público e realização de perguntas e respostas.
+Aplicação de interação de um público e realização de perguntas e respostas.\
 Application of interaction with an audience and conducting questions and answers.
 
 ### Screenshot
 
-![](images/screenshot.png)
+![](/src/assets/images/screenshot.png)
 
 ### Links
 
